@@ -1,6 +1,8 @@
 import type {FileData, InboundPasteData, OutboundPasteData} from "../components/PasteInterface";
 import type { User } from "../components/NavBar";
 
+export const config = { runtime: 'edge' };
+
 export enum RequestMethod {
   GET = "GET",
   POST = "POST",
