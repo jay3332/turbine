@@ -49,9 +49,7 @@ If you'd like to contribute to Turbine, make sure you meet the following require
 - Commit messages should be in present tense, e.g. `Add feature` instead of `Added feature`
 - Keep lines of code under 120 characters long
 
-## Self-hosting?
-I don't plan on providing instructions or support for anyone who tries to self-host this.
-I would prefer you don't self-host your own instance of Turbine and instead use the official instance
-[here](https://turbine.jay3332.tech).
+## Self-hosting
 
-There is nothing stopping you from self-hosting, though. But please abide by the license.
+If you need any assistance with self-hosting Turbinem feel free to send me a message in the [Discord server](https://discord.gg/FqtZ6akWpd).
+As always, please make sure to abide by the license.
