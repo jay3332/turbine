@@ -5,7 +5,7 @@ import { getPaste } from '../api/api'
 import PasteInterface, { type InboundPasteData } from '../components/PasteInterface';
 import {type Socket} from "net";
 
-export const runtime = "edge";
+export const config = { runtime: 'edge' };
 
 export function getIp(connection: Socket, headers: { [key: string]: string | string[] | undefined }): string {
   const forwarded = headers["x-forwarded-for"];

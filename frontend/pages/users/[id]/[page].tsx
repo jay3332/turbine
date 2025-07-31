@@ -17,7 +17,7 @@ import {toast} from "react-toastify";
 import {useRouter} from "next/router";
 import PastePreview from "../../../components/PastePreview";
 
-export const runtime = "edge";
+export const config = { runtime: 'edge' };
 
 export const getServerSideProps: GetServerSideProps = async ({ params, req: { connection, cookies, headers } }) => {
   const { id, page } = params! as { id: string, page?: string };

@@ -3,7 +3,7 @@ import {type User} from "../../../components/NavBar";
 import {type GetServerSidePropsContext} from "next";
 import {PastePreview} from "../../../api/api";
 
-export const runtime = "edge";
+export const config = { runtime: 'edge' };
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getProps(ctx);
