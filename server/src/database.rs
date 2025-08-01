@@ -31,7 +31,7 @@ pub async fn connect() -> Result<(), Box<dyn Error>> {
 
     let pool = PgPoolOptions::new().connect_with(connect_options).await?;
     POOL.set(pool)
-        .unwrap_or_else(|pool| panic!("attempted to initialize more than once with {:?}", pool,));
+        .unwrap_or_else(|pool| panic!("attempted to initialize more than once with {:?}", pool));
 
     Ok(())
 }

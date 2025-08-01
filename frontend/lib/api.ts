@@ -16,6 +16,7 @@ export type RequestOptions = {
   cookies?: Partial<{ [key: string]: string; }>,
   headers?: Record<string, string>,
   json?: any,
+  handleRatelimits?: boolean,
 };
 
 // TODO: change this to turbine domain
@@ -30,6 +31,7 @@ export async function request<Response>(
     cookies,
     headers,
     json,
+    handleRatelimits = true,
   }: RequestOptions = {},
 ): Promise<ApiResponse<Response>> {
   if (json != null) {
@@ -65,7 +67,7 @@ export async function request<Response>(
   if (response.headers.get("content-type") === "application/json") {
     const [ status, data ] = [ response.status, await response.json() ];
 
-    if (status === 429) {
+    if (status === 429 && handleRatelimits) {
       const match = /Try again in ([\d.]+) seconds/.exec(data.message);
 
       if (match == null) {

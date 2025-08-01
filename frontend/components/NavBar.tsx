@@ -7,7 +7,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import useCookie from "../hooks/useCookie";
 import TurbineLogo from '../public/turbine_logo.png';
 import TurbineBanner from '../public/turbine_banner_adjusted.png';
-import {getMe, login, register} from "../api/api";
+import {getMe, login, register} from "../lib/api";
 import Modal from "./Modal";
 import GithubIcon from '../public/icon-github.svg';
 import Cookies from 'js-cookie';

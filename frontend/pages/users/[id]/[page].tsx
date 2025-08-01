@@ -1,5 +1,5 @@
 import {GetServerSideProps} from "next";
-import {getPastes, getStarredPastes, getUser, type PastePreview as PastePreviewType, type PastePreviewWithStar} from "../../../api/api";
+import {getPastes, getStarredPastes, getUser, type PastePreview as PastePreviewType, type PastePreviewWithStar} from "../../../lib/api";
 import {getIp} from "../../[id]";
 import {DEFAULT_AVATAR, User} from "../../../components/NavBar";
 import Head from "next/head";
@@ -186,6 +186,13 @@ const UserPastesHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
 `;
 
 const SwitchPageButtons = styled.div`
@@ -290,7 +297,7 @@ export default function ViewUser({ userData, pastesData }: { userData: User, pas
   let [githubData, setGithubData] = useState<any>();
   let router = useRouter();
   let page = router.query.page as string || 'pastes';
-  let [sortBy, setSortBy]= useState('last_modified');
+  let [sortBy, setSortBy] = useState('last_modified');
   
   let sortFunction = useCallback(() => {
     if (sortBy === 'stars') {

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from 'next/router'
 
-import { createPaste } from "../api/api";
+import { createPaste } from "../lib/api";
 import PasteInterface from "../components/PasteInterface";
 import {useAllCookies} from "../hooks/useCookie";
 

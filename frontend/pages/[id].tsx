@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head'
 
-import { getPaste } from '../api/api'
+import { getPaste } from '../lib/api'
 import PasteInterface, { type InboundPasteData } from '../components/PasteInterface';
 import {type Socket} from "net";
 

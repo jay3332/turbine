@@ -20,7 +20,7 @@ import NewFileIcon from '../public/icon-new-file.svg'
 import EyeIcon from '../public/icon-eye.svg'
 import StarIcon from '../public/icon-star.svg'
 import StarHollowIcon from '../public/icon-star-hollow.svg'
-import {toggleStar} from "../api/api";
+import {toggleStar} from "../lib/api";
 import Link from "next/link";
 
 const AceEditor = dynamic(async () => {

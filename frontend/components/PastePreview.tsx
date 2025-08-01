@@ -1,4 +1,4 @@
-import type { PastePreview as PastePreviewType, PastePreviewWithStar } from "../api/api";
+import type { PastePreview as PastePreviewType, PastePreviewWithStar } from "../lib/api";
 import styled from "styled-components";
 import {useRouter} from "next/router";
 import Link from "next/link";

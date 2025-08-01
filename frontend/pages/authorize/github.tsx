@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import useCookie from "../../hooks/useCookie";
-import {getMe, login, loginGithub, registerGithub} from "../../api/api";
+import {getMe, login, loginGithub, registerGithub} from "../../lib/api";
 import {type User} from "../../components/NavBar";
 import {useEffect, useState} from "react";
 import {toast} from "react-toastify";

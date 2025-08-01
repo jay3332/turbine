@@ -11,3 +11,5 @@ linguist/target/
 server/config.toml
 
 .env
+**/dump.rdb
+**/secret.key

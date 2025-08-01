@@ -1,7 +1,7 @@
 import Page, {getServerSideProps as getProps} from './[page]';
 import {type User} from "../../../components/NavBar";
 import {type GetServerSidePropsContext} from "next";
-import {PastePreview} from "../../../api/api";
+import {PastePreview} from "../../../lib/api";
 
 export const config = { runtime: 'experimental-edge' };
 
