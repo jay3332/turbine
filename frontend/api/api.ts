@@ -1,7 +1,7 @@
 import type {FileData, InboundPasteData, OutboundPasteData} from "../components/PasteInterface";
 import type { User } from "../components/NavBar";
 
-const config = { runtime: 'experimental-edge' };
+const config = { runtime: 'edge' };
 export { config };
 
 export enum RequestMethod {
