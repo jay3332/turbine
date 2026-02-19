@@ -10,6 +10,7 @@ linguist/target/
 
 server/config.toml
 
+.DS_Store
 .env
 **/dump.rdb
 **/secret.key
